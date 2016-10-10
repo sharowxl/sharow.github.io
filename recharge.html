@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<title>网吧联盟</title>
+	<link rel="stylesheet" href="assets/font/iconfont.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/base.css">
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+    <script type="text/javascript" src="assets/js/fastclick.js"></script>
+	<link rel="stylesheet" href="assets/js/dialog.css">
+	<script type="text/javascript" src="assets/js/dialog.js"></script>
+	<script type="text/javascript" src="assets/js/iscroll.js"></script>
+	<link rel="stylesheet" href="assets/js/swiper-3.2.7.min.css">
+	<script type="text/javascript" src="assets/js/swiper-3.2.7.jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/mobile.js"></script>
+</head>
+
+<body>
+	<div class="recharge">
+        <form class="g-form" method="post" data-posturl="#">
+		<div class="item-box padding-box">
+            <div class="flex-box">
+                <div class="list">
+                    <input type="radio" class="weui-check" name="radio1" checked="checked">
+                    <a>
+                    <p class="p1">充<span>30</span>元</p>
+                    <p class="p2">赠送：<span>10</span>元</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <input type="radio" class="weui-check" name="radio1">
+                    <a>
+                    <p class="p1">充<span>50</span>元</p>
+                    <p class="p2">赠送：<span>20</span>元</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <input type="radio" class="weui-check" name="radio1">
+                    <a>
+                    <p class="p1">充<span>100</span>元</p>
+                    <p class="p2">赠送：<span>30</span>元</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <input type="radio" class="weui-check" name="radio1">
+                    <a>
+                    <p class="p1">充<span>200</span>元</p>
+                    <p class="p2">赠送：<span>60</span>元</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <input type="radio" class="weui-check" name="radio1">
+                    <a>
+                    <p class="p1">充<span>300</span>元</p>
+                    <p class="p2">赠送：<span>90</span>元</p>
+                    </a>
+                </div>
+                <div class="list">
+                    <input type="radio" class="weui-check" name="radio1">
+                    <a>
+                    <p class="p1">充<span>500</span>元</p>
+                    <p class="p2">赠送：<span>150</span>元</p>
+                    </a>
+                </div> 
+            </div>  
+            <p class="info blue">充30送10，多充多送</p>    
+        </div>
+        <div class="surebtn">
+            <div class="btn">立即充值<small>（到账40元）</small></div>
+        </div>
+        </form>
+        <p class="treaty text-center">点击立即充值，即表示您已同意<a class="iblue" href="rechargeTreaty.html">《充值协议》</a></p>
+        <script>
+            $(function(){
+              $('.list').click(function(){
+                    $('.weui-check').removeAttr('checked')
+                    $(this).find('input').attr('checked','checked')
+                    var chong=0,shong=0,total=0;
+                    chong=Number($(this).find('.p1 span').html());
+                    shong=Number($(this).find('.p2 span').html());
+                    total=shong+chong;
+                    $('.info').html(`充${chong}送${shong}，多充多送`);
+                    $('.surebtn small').html(`（到账${total}元）`)
+              }) 
+            })
+        </script>
+	</div>
+</body>
+
+</html>

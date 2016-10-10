@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="shortcut icon" href="" type="image/x-icon" />
+        <title>金桥理财</title>
+        <meta name="keywords" content="金桥" />
+        <meta name="description" content="金桥理财介绍" />
+        <link type="text/css" rel="stylesheet" href="css/base.css">
+        <link type="text/css" rel="stylesheet" href="css/index.css">
+        <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="main-nav">
+                <div class="container clearfix">
+                    <a class="fl-left logo" href="/"><img src="images/logo.png" alt="金桥理财"></a>
+                    <ul class="index-nav fl-right">
+                        <li class="on"><a href="#mao1">金桥理财</a></li>
+                        <li><a href="#mao2">银行理财</a></li>
+                        <li><a href="#mao3">券商理财</a></li>
+                        <li><a href="#mao4">社会私募</a></li>
+                        <li><a href="#mao5">贵金属理财</a></li>
+                        <li class="last"><a href="#">证券开户</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="hd">
+                    <ul><li class="i-icon on"></li><li class="i-icon"></li><li class="i-icon"></li></ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                        <li><a href="#" style="background: url(images/banner.jpg) center center no-repeat;"></a></li>
+                        <li><a href="#" style="background: url(images/banner2.jpg) center center no-repeat;"></a></li>
+                        <li><a href="#" style="background: url(images/banner3.jpg) center center no-repeat;"></a></li>
+                    </ul>
+                </div>
+                <div class="login-box">
+                    <div class="d1"><p class="lineblock">投融社</p><span><a class="reg" href="#">注册</a>/<a class="log" href="#">登陆</a></span></div>
+                    <div class="d1"><p class="lineblock">浙里投</p><span><a class="reg" href="#">注册</a>/<a class="log" href="#">登陆</a></span></div>
+                    <div class="d1"><p class="lineblock">浙金中心</p><span><a class="reg" href="#">注册</a>/<a class="log" href="#">登陆</a></span></div>
+                </div>
+                <div class="loading"></div>
+                <script>
+                    $(".banner").slide({mainCell:".bd ul",autoPlay:true,effect:"fold"});
+                    //图片加载中动画
+                    !function (box,i) {
+                        $(box).append('<div class="loading"></div>');
+                        var str=$(i).css('background-image');
+                        str=str.substring(4,str.length-1).replace("\"","").replace("\"","");
+                        $('body').append('<img id="loadImgPro" class="hide" src="'+str+'"/>');
+                        $('#loadImgPro').load(function () {
+                            $(box).find('.loading').fadeOut();
+                            $(box).find('.bd ul').fadeIn();
+                            $(this).remove();
+                        });
+
+                    }('.banner','.banner .bd li:eq(0) a')
+                </script>
+            </div>
+
+
+
+        <div class="footer">
+            <div class="container clearfix">
+                <div class="copyright fl-left">
+                    <p class="p1 font-size-18"><span class="name">金桥理财俱乐部</span>版权所有</p>
+                    <p class="p2">浙ICP备16026157号-1</p>
+                </div>
+                <div class="code fl-left"><img src="images/code.jpg"></div>
+                <div class="contact fl-left">
+                    <p class="tit font-size-18">客服电话</p>
+                    <p class="con">0571-85310557</p>
+                    <p class="tit font-size-18">俱乐部地址</p>
+                    <p class="con">xxxxxxxxxxxxxxxxx</p>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

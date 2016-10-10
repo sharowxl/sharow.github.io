@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<title>网吧联盟</title>
+	<link rel="stylesheet" href="assets/font/iconfont.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/base.css">
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+	<script type="text/javascript" src="assets/js/fastclick.js"></script>
+	<link rel="stylesheet" href="assets/js/dialog.css">
+	<script type="text/javascript" src="assets/js/dialog.js"></script>
+	<script type="text/javascript" src="assets/js/iscroll.js"></script>
+	<link rel="stylesheet" href="assets/js/swiper-3.2.7.min.css">
+	<script type="text/javascript" src="assets/js/swiper-3.2.7.jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/mobile.js"></script>
+</head>
+
+<body>
+	<div class="">
+		<form class="g-form" method="post" data-posturl="#">
+	        <div class="weui_cells_title text-center">仔细填写报名信息，才能顺利参赛哦！</div>
+			<div class="weui_cells">
+	            <div class="weui_cell">
+	                <div class="weui_cell_hd">姓名</div>
+	                <div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入姓名" onblur="rule.empty($(this),'姓名不能为空')" data-group-state="false"></div>
+	            </div>
+	            <div class="weui_cell">
+	                <div class="weui_cell_hd">手机号</div>
+	                <div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入手机号" onblur="rule.phone($(this))" data-group-state="false"></div>
+	            </div>
+	        </div>
+	        <div class="weui_cells_title iblue">我们不会在任何地方泄漏您的个人信息，仅用于核实参赛人员信息。</div>
+	        <div class="surebtn">
+	            <div class="btn">填好了，马上报名</div>
+	        </div>
+        </form>
+	</div>
+</body>
+
+</html>

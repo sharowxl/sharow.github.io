@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<title>网吧联盟</title>
+	<link rel="stylesheet" href="assets/font/iconfont.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/base.css">
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+	<script type="text/javascript" src="assets/js/fastclick.js"></script>
+	<link rel="stylesheet" href="assets/js/dialog.css">
+	<script type="text/javascript" src="assets/js/dialog.js"></script>
+	<script type="text/javascript" src="assets/js/iscroll.js"></script>
+	<link rel="stylesheet" href="assets/js/swiper-3.2.7.min.css">
+	<script type="text/javascript" src="assets/js/swiper-3.2.7.jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/mobile.js"></script>
+</head>
+
+<body class="white-bg">
+	<div class="fixed-bottom index">
+		<div class="nav-list flex-box">
+	        <a href="recharge.html"><div class="con"><i class="icon-chongzhi green"></i>优惠充值</div></a>
+	        <a id="signIn"><div class="con"><i class="icon-liwu red"></i>签到有礼</div></a>
+	        <a href="share.html"><div class="con"><i class="icon-haoyou blue"></i>邀请好友</div></a>
+	        <a href="gamesList.html"><div class="con"><i class="icon-saishi yellow"></i>热门赛事</div></a>
+	        <a href="schedule.html"><div class="con"><i class="icon-dingzuo purple"></i>抢先订座</div></a>
+	        <a href="activityGame.html" id="recharge"><div class="con"><i class="icon-choujiang orange"></i>手气抽奖</div></a>
+	    </div>
+	    <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="wangkaList.html"><img src="assets/images/banner.jpg"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="wangkaList.html"><img src="assets/images/banner.jpg"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="wangkaList.html"><img src="assets/images/banner.jpg"></a>
+                </div>
+            </div>
+            <div class="pagination"></div>
+            <script type="text/javascript">
+            $(function() {
+                var swiper = new Swiper('.swiper-container', {
+                    pagination: '.pagination',
+                    autoplay: 3000,
+                    paginationClickable: '.pagination',
+                    loop: true
+
+                });
+            })
+            </script>
+        </div>
+
+		<div class="fix-bottom">
+	        <a href="index.html" class="fix-b active">
+	            <i class="icon-homefill"></i>
+	            <p>首页</p>
+	        </a>
+	        <a href="userCenter.html" class="fix-b">
+	            <i class="icon-people"></i>
+	            <p>我的</p>
+	        </a>
+	    </div>
+    </div>
+    <script type="text/javascript">
+    	$(function(){
+    		$('#recharge').click(function(){
+				$.confirm('<div class="con">本操作需要<br />绑定您的上网卡号哦！</div>',[{no:"取消"},{yes:"去绑卡"}],function(type){
+				    if(type=="yes"){
+				    	window.location.href='bindCard.html'
+				    }else if(type=="no"){
+				        this.hide();  
+				    }
+				});
+    		})
+    		$('#signIn').click(function(){
+				$.confirm('<div class="tit orange">恭喜获得5积分，明天继续加油</div>'+
+					'<div class="con">签到规则<br/>第1天获5积分，第2天获10积分，<br/>第3天及以后获20积分；中断重新开始。</div>'+
+					'<div class="go-game"><i class="icon-choujiang"></i></div>'+
+					'<div class="info">花积分，抽奖赢好礼，点击参与</div>',[],null,{className:'ui-qiandao showClose ui-alert',width:'270px'});
+				$.alert('今日已签到,明天再接再厉')
+			})
+    	})
+    </script>
+</body>
+
+</html>
