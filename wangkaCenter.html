@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<title>网吧联盟</title>
+	<link rel="stylesheet" href="assets/font/iconfont.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/base.css">
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+	<script type="text/javascript" src="assets/js/fastclick.js"></script>
+	<link rel="stylesheet" href="assets/js/dialog.css">
+	<script type="text/javascript" src="assets/js/dialog.js"></script>
+	<script type="text/javascript" src="assets/js/iscroll.js"></script>
+	<link rel="stylesheet" href="assets/js/swiper-3.2.7.min.css">
+	<script type="text/javascript" src="assets/js/swiper-3.2.7.jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/mobile.js"></script>
+</head>
+
+<body>
+	<div class="wangkacenter fixed-bottom">
+		<div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#"><img src="assets/images/banner.jpg"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="assets/images/banner.jpg"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="assets/images/banner.jpg"></a>
+                </div>
+            </div>
+            <div class="pagination"></div>
+            <script type="text/javascript">
+            $(function() {
+                var swiper = new Swiper('.swiper-container', {
+                    pagination: '.pagination',
+                    autoplay: 3000,
+                    paginationClickable: '.pagination',
+                    loop: true
+
+                });
+            })
+            </script>
+        </div>
+        <div class="item-box">
+	        <div class="weui_cell">
+	            <div class="weui_cell_hd font-size16">地址</div>
+	            <div class="weui_cell_bd weui_cell_primary blue text-right">上海市徐汇区永嘉路697号</div>
+	            <i class="icon-location blue r-icon"></i>
+	        </div>
+	        <div class="weui_cell">
+	            <div class="weui_cell_hd font-size16">电话</div>
+	            <a href="tel://021-64339163" class="weui_cell_bd weui_cell_primary orange text-right">021-64339163</a>
+	            <i class="icon-phone orange r-icon"></i>
+	        </div>
+	        <div class="rule">
+		        <div class="con">
+		        	<p>坐地铁一号线到衡山路，道路两旁繁茂的法国梧桐和林荫中颇具特色的各类高档欧陆建筑，为衡山路增添了浓郁的异国文化气息。衡山路是上海最负盛名的酒吧一条街。</p>         
+					<p>到来无疑是锦上添花， 摩非是属于湖北雷骏投资管理有限公司继雷骏网盟之后推出的另一高端品牌。摩非通过多年的努力一致力于为顾客提供舒适的环境，优质的咖啡以及无与伦比的上网体验。</p>
+		        </div>
+	        </div> 
+        </div>
+	</div>
+</body>
+
+</html>

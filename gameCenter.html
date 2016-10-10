@@ -26,26 +26,18 @@
 	<script type="text/javascript" src="assets/js/mobile.js"></script>
 </head>
 
-<body class="white-bg">
-	<div class="fixed-bottom index">
-		<div class="nav-list flex-box">
-	        <a href="recharge.html"><div class="con"><i class="icon-chongzhi green"></i>优惠充值</div></a>
-	        <a id="signIn"><div class="con"><i class="icon-liwu red"></i>签到有礼</div></a>
-	        <a href="share.html"><div class="con"><i class="icon-haoyou blue"></i>邀请好友</div></a>
-	        <a href="gamesList.html"><div class="con"><i class="icon-saishi yellow"></i>热门赛事</div></a>
-	        <a href="schedule.html"><div class="con"><i class="icon-dingzuo purple"></i>抢先订座</div></a>
-	        <a href="activityGame.html" id="recharge"><div class="con"><i class="icon-choujiang orange"></i>手气抽奖</div></a>
-	    </div>
-	    <div class="swiper-container">
+<body>
+	<div class="gamecenter fixed-bottom">
+		<div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <a href="wangkaList.html"><img src="assets/images/banner.jpg"></a>
+                    <a href="#"><img src="assets/images/banner.jpg"></a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="wangkaList.html"><img src="assets/images/banner.jpg"></a>
+                    <a href="#"><img src="assets/images/banner.jpg"></a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="wangkaList.html"><img src="assets/images/banner.jpg"></a>
+                    <a href="#"><img src="assets/images/banner.jpg"></a>
                 </div>
             </div>
             <div class="pagination"></div>
@@ -61,38 +53,45 @@
             })
             </script>
         </div>
+        <div class="item-box">
+	        <div class="weui_cell">
+	            <div class="weui_cell_hd font-size16">比赛名称</div>
+	            <div class="weui_cell_bd weui_cell_primary blue text-right">城市英雄争霸赛</div>
+	        </div>
+	        <div class="weui_cell">
+	            <div class="weui_cell_hd font-size16">报名时间</div>
+	            <div class="weui_cell_bd weui_cell_primary blue text-right">2016/09/12 — 2016/10/02</div>
+	        </div>
+	        <div class="rule">
+	        	<div class="tit font-size16">
+		        	比赛规则
+		        </div>
+		        <div class="con">
+		        	<p>坐地铁一号线到衡山路，道路两旁繁茂的法国梧桐和林荫中颇具特色的各类高档欧陆建筑，为衡山路增添了浓郁的异国文化气息。衡山路是上海最负盛名的酒吧一条街。</p>         
+					<p>到来无疑是锦上添花， 摩非是属于湖北雷骏投资管理有限公司继雷骏网盟之后推出的另一高端品牌。摩非通过多年的努力一致力于为顾客提供舒适的环境，优质的咖啡以及无与伦比的上网体验。</p>
+		        </div>
+	        </div> 
+        </div>
 
-		<div class="fix-bottom">
-	        <a href="index.html" class="fix-b active">
-	            <i class="icon-homefill"></i>
-	            <p>首页</p>
-	        </a>
-	        <a href="userCenter.html" class="fix-b">
-	            <i class="icon-people"></i>
-	            <p>我的</p>
-	        </a>
-	    </div>
-    </div>
-    <script type="text/javascript">
-    	$(function(){
-    		$('#recharge').click(function(){
-				$.confirm('<div class="con">本操作需要<br />绑定您的上网卡号哦！</div>',[{no:"取消"},{yes:"去绑卡"}],function(type){
+        <a class="fix-bottom fix-bottom-btn" id="gamestart" class="fix-b">
+            立即报名
+        </a>
+        <script>
+        	$(function(){
+        		$('#gamestart').click(function(){
+				$.confirm('<div class="tit">选择您的报名类型</div>'+
+					'<div class="onejoin"><a href="gamesOneJoin.html" class="join"><i class="icon-people"></i></a><p class="blue">单人参赛</p></div>'+
+					'<div class="teamjoin"><a href="gamesTeamJoin.html" class="join"><i class="icon-friend"></i></a><p class="orange">战队参赛</p></div>',[],function(type){
 				    if(type=="yes"){
-				    	window.location.href='bindCard.html'
 				    }else if(type=="no"){
 				        this.hide();  
 				    }
-				});
-    		})
-    		$('#signIn').click(function(){
-				$.confirm('<div class="tit orange">恭喜获得5积分，明天继续加油</div>'+
-					'<div class="con">签到规则<br/>第1天获5积分，第2天获10积分，<br/>第3天及以后获20积分；中断重新开始。</div>'+
-					'<div class="go-game"><i class="icon-choujiang"></i></div>'+
-					'<div class="info">花积分，抽奖赢好礼，点击参与</div>',[],null,{className:'ui-qiandao showClose ui-alert',width:'270px'});
-				$.alert('今日已签到,明天再接再厉')
+				},{className:'ui-qiandao showClose ui-alert',width:'270px'});
 			})
-    	})
-    </script>
+        	})
+        </script>
+
+	</div>
 </body>
 
 </html>
